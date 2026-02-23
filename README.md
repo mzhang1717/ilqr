@@ -1,4 +1,4 @@
-# iLQR Bicycle Trajectory Optimization
+# iLQR Trajectory Optimization
 
 This project implements an iterative Linear Quadratic Regulator (iLQR) pipeline for a kinematic bicycle model with trajectory-tracking costs and control limits.
 
