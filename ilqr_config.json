@@ -1,0 +1,36 @@
+{
+    "bicycle_model": {
+        "wheel_base": 0.80,
+        "control_lower_bound": [-1.5, -0.41],
+        "control_upper_bound": [1.5, 0.41]
+    },
+
+    "ilqr_solver": {
+        "horizon": 100,
+        "step_interval": 0.1, 
+        "max_iterations": 100,
+        "converge_tolerance": 1e-6,
+        "learning_rate": 1.0,
+        "line_search": {
+            "armijo_coefficient": 1e-4,
+            "backtracking_decay": 0.5,
+            "minimum_step": 1e-6
+        },
+        "regularization": {
+            "regularization_scale": 1e-6,
+            "max_projected_newton_iterations": 10,
+            "active_set_tolerance": 1e-10,
+            "step_tolerance": 1e-9
+        }
+    },
+
+    "bicyce_tracking_cost": {
+        "weight_cross_tracking_error": 10.0,
+        "weight_heading_error": 2.0,
+        "weight_matrix_controls": [[1.0, 0.0], [0.0, 1.0]],
+        "weight_cross_tracking_error_terminal": 20.0,
+        "weight_heading_error_terminal": 4.0,
+        "weight_speed_error": 10.0,
+        "weight_speed_error_terminal": 20.0
+    }
+}
